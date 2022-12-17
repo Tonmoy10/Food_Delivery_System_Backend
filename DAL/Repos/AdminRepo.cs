@@ -14,6 +14,13 @@ namespace DAL.Repos
     {
         public bool Add(Admin data)
         {
+            var user = new User();
+            user.user_name = data.email;
+            user.password = data.password;
+            user.role = "Admin";
+            database.Users.Add(user);
+            database.SaveChanges();
+            data.user_id = user.user_id;
             database.Admins.Add(data);
             return database.SaveChanges() > 0 ;
         }

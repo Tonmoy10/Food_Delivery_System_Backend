@@ -28,6 +28,9 @@ namespace DAL.Models
 
         [Required]
         public string contact { get; set; }
-        public string token { get; set; }
+        [ForeignKey("User")]
+        public int user_id { get; set; }
+
+        public virtual User User { get; set; }
     }
 }

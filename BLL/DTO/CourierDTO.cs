@@ -22,6 +22,6 @@ namespace BLL.DTO
 
         public int income { get; set; }
 
-        public string token { get; set; }
+        public int user_id { get; set; }
     }
 }

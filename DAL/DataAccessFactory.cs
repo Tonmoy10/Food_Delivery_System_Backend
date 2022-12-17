@@ -44,5 +44,17 @@ namespace DAL
         {
             return new SaleRepo();
         }
+        public static ICrud<User, int, bool> UserDataAccess()
+        {
+            return new UserRepo();
+        }
+        public static IAuth AuthDataAccess()
+        {
+            return new UserRepo();
+        }
+        public static ICrud<Token, int, bool> TokenDataAccess()
+        {
+            return new TokenRepo();
+        }
     }
 }

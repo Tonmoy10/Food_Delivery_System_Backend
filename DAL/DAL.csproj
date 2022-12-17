@@ -61,11 +61,18 @@
     <Compile Include="EF\Models\Item.cs" />
     <Compile Include="EF\Models\Order.cs" />
     <Compile Include="EF\Models\Sale.cs" />
+    <Compile Include="EF\Models\Token.cs" />
+    <Compile Include="EF\Models\User.cs" />
+    <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\ICrud.cs" />
     <Compile Include="Interfaces\IEmployee.cs" />
     <Compile Include="Migrations\202212070701146_AddAllTablesAndSeeding.cs" />
     <Compile Include="Migrations\202212070701146_AddAllTablesAndSeeding.designer.cs">
       <DependentUpon>202212070701146_AddAllTablesAndSeeding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212171005154_UserTableTokenTableAdded.cs" />
+    <Compile Include="Migrations\202212171005154_UserTableTokenTableAdded.designer.cs">
+      <DependentUpon>202212171005154_UserTableTokenTableAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs" />
@@ -78,10 +85,15 @@
     <Compile Include="Repos\ItemRepo.cs" />
     <Compile Include="Repos\OrderRepo.cs" />
     <Compile Include="Repos\SaleRepo.cs" />
+    <Compile Include="Repos\TokenRepo.cs" />
+    <Compile Include="Repos\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202212070701146_AddAllTablesAndSeeding.resx">
       <DependentUpon>202212070701146_AddAllTablesAndSeeding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212171005154_UserTableTokenTableAdded.resx">
+      <DependentUpon>202212171005154_UserTableTokenTableAdded.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\DAL.Migrations.AddAllTablesAndSeeding.resources" />
   </ItemGroup>

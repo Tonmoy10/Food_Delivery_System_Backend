@@ -10,7 +10,10 @@ namespace BLL.DTO
     public class OrderDTO
     {
         public int order_id { get; set; }
+        public int customer_id { get; set; }
+        public int item_id { get; set; }
         public int total_price { get; set; }
         public int status { get; set; }
+        public int? delivered_by { get; set; }
     }
 }

@@ -13,6 +13,6 @@ namespace BLL.DTO
         public string email { get; set; }
         public string password { get; set; }
         public string contact { get; set; }
-        public string token { get; set; }
+        public int user_id { get; set; }
     }
 }

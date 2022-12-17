@@ -14,6 +14,6 @@ namespace BLL.DTO
         public string password { get; set; }
         public string contact { get; set; }
         public string location { get; set; }
-        public string token { get; set; }
+        public int user_id { get; set; }
     }
 }

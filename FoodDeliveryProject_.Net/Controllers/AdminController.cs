@@ -1,5 +1,6 @@
 ﻿using BLL.DTO;
 using BLL.Services;
+using FoodDeliveryProject_.Net.AuthFilter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace FoodDeliveryProject.Controllers
 {
     public class AdminController : ApiController
     {
+        [Logged]
         [HttpGet]
         [Route("api/View/Employees")]
         public HttpResponseMessage GetAllEmployees()

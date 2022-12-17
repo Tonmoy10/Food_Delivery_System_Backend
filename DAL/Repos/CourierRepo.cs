@@ -12,8 +12,25 @@ namespace DAL.Repos
     {
         public bool Add(Courier data)
         {
+            var user = new User();
+            user.user_name = data.email;
+            user.password = data.password;
+            user.role = "Courier";
+            database.Users.Add(user);
+            database.SaveChanges();
+            data.user_id = user.user_id;
             database.Couriers.Add(data);
             return database.SaveChanges() > 0;
+        }
+
+        public bool Authenticate(string uname, string pass)
+        {
+            var data = database.Couriers.FirstOrDefault(u => u.courier_name.Equals(uname) && u.password.Equals(pass));
+            if (data != null)
+            {
+                return true;
+            }
+            return false;
         }
 
         public bool Delete(int id)

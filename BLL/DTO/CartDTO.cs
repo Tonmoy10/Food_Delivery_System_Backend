@@ -10,6 +10,7 @@ namespace BLL.DTO
     public class CartDTO
     {
         public int cart_id { get; set; }
+        public int customer_id { get; set; }
         public int item_id { get; set; }
         public int total_price { get; set; }
     }

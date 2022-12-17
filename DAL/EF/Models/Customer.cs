@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,11 @@ namespace DAL.EF.Models
 
         [Required]
         public string location { get; set; }
-        public string token { get; set; }
+
+        [ForeignKey("User")]
+        public int user_id { get; set; }
+
+        public virtual User User { get; set; }
 
         public virtual ICollection<Cart> Carts { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
