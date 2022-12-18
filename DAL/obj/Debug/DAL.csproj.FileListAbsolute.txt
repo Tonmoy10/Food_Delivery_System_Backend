@@ -11,3 +11,17 @@ E:\Study\Advance C#\FoodDeliveryProject_.Net\DAL\obj\Debug\DAL.pdb
 E:\Study\Advance C#\FoodDeliveryProject_.Net\DAL\obj\Debug\DAL.Migrations.AddAllTablesAndSeeding.resources
 E:\Study\Advance C#\FoodDeliveryProject_.Net\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 E:\Study\Advance C#\FoodDeliveryProject_.Net\DAL\obj\Debug\DAL.Migrations.UserTableTokenTableAdded.resources
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\bin\Debug\DAL.dll.config
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\bin\Debug\DAL.dll
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\bin\Debug\DAL.pdb
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\bin\Debug\EntityFramework.xml
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\obj\Debug\DAL.Migrations.AddAllTablesAndSeeding.resources
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\obj\Debug\DAL.Migrations.UserTableTokenTableAdded.resources
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\obj\Debug\DAL.dll
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\obj\Debug\DAL.pdb
+E:\Study\Advance C#\FoodDeliveryProject.Net\DAL\obj\Debug\DAL.Migrations.AllTablesModifiedWithSeeding.resources

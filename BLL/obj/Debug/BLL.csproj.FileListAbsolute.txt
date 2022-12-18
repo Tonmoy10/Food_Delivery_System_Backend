@@ -11,3 +11,16 @@ E:\Study\Advance C#\FoodDeliveryProject_.Net\BLL\obj\Debug\BLL.csproj.CoreCompil
 E:\Study\Advance C#\FoodDeliveryProject_.Net\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\Study\Advance C#\FoodDeliveryProject_.Net\BLL\obj\Debug\BLL.dll
 E:\Study\Advance C#\FoodDeliveryProject_.Net\BLL\obj\Debug\BLL.pdb
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\bin\Debug\BLL.dll
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\bin\Debug\BLL.pdb
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\bin\Debug\DAL.dll
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\bin\Debug\EntityFramework.dll
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\bin\Debug\DAL.pdb
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\bin\Debug\DAL.dll.config
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\bin\Debug\AutoMapper.xml
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\bin\Debug\EntityFramework.xml
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\obj\Debug\BLL.dll
+E:\Study\Advance C#\FoodDeliveryProject.Net\BLL\obj\Debug\BLL.pdb

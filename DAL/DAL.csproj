@@ -74,6 +74,10 @@
     <Compile Include="Migrations\202212171005154_UserTableTokenTableAdded.designer.cs">
       <DependentUpon>202212171005154_UserTableTokenTableAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212182006167_AllTablesModifiedWithSeeding.cs" />
+    <Compile Include="Migrations\202212182006167_AllTablesModifiedWithSeeding.designer.cs">
+      <DependentUpon>202212182006167_AllTablesModifiedWithSeeding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212171005154_UserTableTokenTableAdded.resx">
       <DependentUpon>202212171005154_UserTableTokenTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212182006167_AllTablesModifiedWithSeeding.resx">
+      <DependentUpon>202212182006167_AllTablesModifiedWithSeeding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\DAL.Migrations.AddAllTablesAndSeeding.resources" />
   </ItemGroup>

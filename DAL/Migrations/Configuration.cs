@@ -23,6 +23,147 @@
 
         protected override void Seed(DAL.EF.FoodContext context)
         {
+            //Seeders for admin
+            List<User> User = new List<User>();
+            List<Admin> Admin = new List<Admin>();
+            for (int i = 2; i < 6; i++)
+            {
+                int firstName = rand.Next(firstNames.Length);
+                int lastName = rand.Next(lastNames.Length);
+                var nameF = firstNames[firstName];
+                var nameL = lastNames[lastName];
+                User.Add(new User
+                {
+                    user_id = i,
+                    user_name = (nameF + "_" + nameL).ToLower() + "@admin.com",
+                    password = "password",
+                    role = "Admin"
+                });
+                Admin.Add(new Admin
+                {
+                    admin_name = nameF,
+                    email = (nameF + "_" + nameL).ToLower() + "@admin.com",
+                    password = "password",
+                    contact = "123-123-1234",
+                    user_id = i
+                });
+            }
+            context.Users.AddOrUpdate(User.ToArray());
+            context.Admins.AddOrUpdate(Admin.ToArray());
+
+            //Seeders for Customer
+            List<User> UserCustomer = new List<User>();
+            List<Customer> Customer = new List<Customer>();
+            for (int i = 6; i < 13; i++)
+            {
+                int firstName = rand.Next(firstNames.Length);
+                int lastName = rand.Next(lastNames.Length);
+                int location = rand.Next(locations.Length);
+                var nameF = firstNames[firstName];
+                var nameL = lastNames[lastName];
+                UserCustomer.Add(new User
+                {
+                    user_id = i,
+                    user_name = (nameF + "_" + nameL).ToLower() + "@customer.com",
+                    password = "password",
+                    role = "Customer"
+                });
+                Customer.Add(new Customer
+                {
+                    customer_name = nameF,
+                    email = (nameF + "_" + nameL).ToLower() + "@customer.com",
+                    password = "password",
+                    contact = "123-123-1234",
+                    location = locations[location],
+                    user_id = i
+                });
+            }
+            context.Users.AddOrUpdate(UserCustomer.ToArray());
+            context.Customers.AddOrUpdate(Customer.ToArray());
+
+            //Seeders for Courier
+            List<User> UserCourier = new List<User>();
+            List<Courier> Courier = new List<Courier>();
+            var random = new Random();
+            for (int i = 13; i < 19; i++)
+            {
+                int firstName = rand.Next(firstNames.Length);
+                int lastName = rand.Next(lastNames.Length);
+                int location = rand.Next(locations.Length);
+                var nameF = firstNames[firstName];
+                var nameL = lastNames[lastName];
+                UserCourier.Add(new User
+                {
+                    user_id = i,
+                    user_name = (nameF + "_" + nameL).ToLower() + "@courier.com",
+                    password = "password",
+                    role = "Courier"
+                });
+                Courier.Add(new Courier
+                {
+                    courier_name = nameF,
+                    email = (nameF + "_" + nameL).ToLower() + "@courier.com",
+                    password = "password",
+                    contact = "123-123-1234",
+                    location = locations[location],
+                    income = random.Next(1000, 5000),
+                    user_id = i
+                });
+            }
+            context.Users.AddOrUpdate(UserCourier.ToArray());
+            context.Couriers.AddOrUpdate(Courier.ToArray());
+
+
+            //Seeder for Sale
+            List<Sale> Sale = new List<Sale>();
+            for (int i = 1; i < 5; i++)
+            {
+                Sale.Add(new Sale
+                {
+                    sales_id = i,
+                    expense = 0,
+                    revenue = 0,
+                    date = DateTime.Now
+                });
+            }
+            context.Sales.AddOrUpdate(Sale.ToArray());
+
+            //Seeder for Item
+            List<Item> Item = new List<Item>();
+            for (int i = 1; i < 5; i++)
+            {
+                int item = rand.Next(items.Length);
+                Item.Add(new Item
+                {
+                    item_id = i,
+                    item_name = items[item],
+                    stock = 500,
+                    unit_price = 20,
+                    man_date = DateTime.Now,
+                    exp_date = DateTime.Now
+                });
+            }
+            context.Items.AddOrUpdate(Item.ToArray());
+
+            //Seeder for Order
+            List<Order> Order = new List<Order>();
+            for (int i = 1; i < 5; i++)
+            {
+                Order.Add(new Order
+                {
+                    order_id = i,
+                    customer_id = rand.Next(1, 8),
+                    item_id = rand.Next(1, 3),
+                    total_price = 0,
+                    status = 0,
+                    delivered_by = rand.Next(1, 7)
+                });
+
+            }
+            context.Orders.AddOrUpdate(Order.ToArray());
+
+
+
 
             //Seeders for User
             //List<User> User = new List<User>();
@@ -32,7 +173,7 @@
             //    password = "password",
             //    role = "Admin"
             //});
-            //for (int i= 2; i < 5; i++)
+            //for (int i = 2; i < 5; i++)
             //{
             //    int firstName = rand.Next(firstNames.Length);
             //    int lastName = rand.Next(lastNames.Length);
@@ -41,13 +182,13 @@
             //        user_name = (firstNames[firstName] + "_" + lastNames[lastName]).ToLower() + "@admin.com",
             //        password = "password",
             //        role = "Admin"
-            //    }) ;
+            //    });
             //}
             //context.Users.AddOrUpdate(User.ToArray());
 
-            ////Seeders for Admin
+            //////Seeders for Admin
             //List<Admin> Admin = new List<Admin>();
-            //for(int i = 1; i< 5; i++)
+            //for (int i = 1; i < 5; i++)
             //{
             //    var data = User.First(u => u.user_id.Equals(i));
             //    Admin.Add(new Admin
@@ -56,7 +197,7 @@
             //        email = data.user_name,
             //        password = data.password,
             //        contact = "123-123-1234".
-            //        user_id = 
+            //        user_id =
             //    });
             //}
             ////Admin.Add(new Admin
@@ -120,54 +261,6 @@
             //    });
             //}
             //context.Couriers.AddOrUpdate(Courier.ToArray());
-
-            ////Seeder for Sale
-            //List<Sale> Sale = new List<Sale>();
-            //for (int i = 1; i < 5; i++)
-            //{
-            //    Sale.Add(new Sale
-            //    {
-            //        sales_id = i,
-            //        expense = 0,
-            //        revenue = 0,
-            //        date = DateTime.Now
-            //    });
-            //}
-            //context.Sales.AddOrUpdate(Sale.ToArray());
-
-            ////Seeder for Item
-            //List<Item> Item = new List<Item>();
-            //for (int i = 1; i < 5; i++)
-            //{
-            //    int item = rand.Next(items.Length);
-            //    Item.Add(new Item
-            //    {
-            //        item_id = i,
-            //        item_name = items[item],
-            //        stock = 500,
-            //        unit_price = 20,
-            //        man_date = DateTime.Now,
-            //        exp_date = DateTime.Now
-            //    });
-            //}
-            //context.Items.AddOrUpdate(Item.ToArray());
-
-            ////Seeder for Order
-            //List<Order> Order = new List<Order>();
-            //for (int i = 1; i < 5; i++)
-            //{
-            //    Order.Add(new Order
-            //    {
-            //        order_id = i,
-            //        customer_id = rand.Next(1, 3),
-            //        item_id = rand.Next(1, 3),
-            //        total_price = 0,
-            //        status = 0,
-            //        delivered_by = rand.Next(1, 3)
-            //    });
-
-            //}
-            //context.Orders.AddOrUpdate(Order.ToArray());
         }
     }
 }
