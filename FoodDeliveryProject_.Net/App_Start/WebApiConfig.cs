@@ -19,6 +19,7 @@ namespace FoodDeliveryProject_.Net
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.EnableCors();
         }
     }
 }

@@ -7,14 +7,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace FoodDeliveryProject.Controllers
 {
+    [EnableCors("*","*","*")]
+    //[Logged]
     public class AdminController : ApiController
     {
-        [Logged]
         [HttpGet]
-        [Route("api/View/Employees")]
+        [Route("api/Admin/View/Employees")]
         public HttpResponseMessage GetAllEmployees()
         {
             try
@@ -28,7 +30,7 @@ namespace FoodDeliveryProject.Controllers
             }
         }
         [HttpPost]
-        [Route("api/Add/Admin")]
+        [Route("api/Admin/Add")]
         public HttpResponseMessage AddAdmin(AdminDTO data)
         {
             try 
@@ -71,7 +73,7 @@ namespace FoodDeliveryProject.Controllers
             }
         }
         [HttpGet]
-        [Route("api/View/Admins")]
+        [Route("api/Admin/ViewAll")]
         public HttpResponseMessage GetAdmins()
         {
             try
@@ -85,7 +87,7 @@ namespace FoodDeliveryProject.Controllers
             }
         }
         [HttpGet]
-        [Route("api/View/Admin/{id}")]
+        [Route("api/Admin/View/{id}")]
         public HttpResponseMessage GetAdmin(int id)
         {
             try
