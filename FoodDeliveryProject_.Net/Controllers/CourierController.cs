@@ -13,20 +13,6 @@ namespace FoodDeliveryProject_.Net.Controllers
     [EnableCors("*", "*", "*")]
     public class CourierController : ApiController
     {
-        [HttpPost]
-        [Route("api/Add/Courier")]
-        public HttpResponseMessage AddCourier(CourierDTO data)
-        {
-            try
-            {
-                var user = CourierService.AddCourier(data);
-                return Request.CreateResponse(HttpStatusCode.OK, user);
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
-            }
-        }
         [HttpGet]
         [Route("api/Courier/Delete/{id}")]
         public HttpResponseMessage DeleteCourier(int id)
@@ -56,20 +42,7 @@ namespace FoodDeliveryProject_.Net.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
-        [HttpGet]
-        [Route("api/View/Couriers")]
-        public HttpResponseMessage GetCouriers()
-        {
-            try
-            {
-                var data = CourierService.GetCouriers();
-                return Request.CreateResponse(HttpStatusCode.OK, data);
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
-            }
-        }
+        
         [HttpGet]
         [Route("api/View/Courier/{id}")]
         public HttpResponseMessage GetCourier(int id)

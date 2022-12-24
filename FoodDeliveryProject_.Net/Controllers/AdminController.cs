@@ -15,20 +15,6 @@ namespace FoodDeliveryProject.Controllers
     //[Logged]
     public class AdminController : ApiController
     {
-        [HttpGet]
-        [Route("api/Admin/View/Employees")]
-        public HttpResponseMessage GetAllEmployees()
-        {
-            try
-            {
-                var data = AdminService.GetEmployees();
-                return Request.CreateResponse(HttpStatusCode.OK, data);
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
-            }
-        }
         [HttpPost]
         [Route("api/Admin/Add")]
         public HttpResponseMessage AddAdmin(AdminDTO data)
@@ -93,6 +79,36 @@ namespace FoodDeliveryProject.Controllers
             try
             {
                 var data = AdminService.GetAdmin(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("api/Admin/Add/Courier")]
+        public HttpResponseMessage AddCourier(CourierDTO data)
+        {
+            try
+            {
+                var user = CourierService.AddCourier(data);
+                return Request.CreateResponse(HttpStatusCode.OK, user);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("api/View/Couriers")]
+        public HttpResponseMessage GetCouriers()
+        {
+            try
+            {
+                var data = CourierService.GetCouriers();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
