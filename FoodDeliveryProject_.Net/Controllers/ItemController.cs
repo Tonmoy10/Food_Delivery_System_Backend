@@ -1,5 +1,6 @@
 ﻿using BLL.DTO;
 using BLL.Services;
+using FoodDeliveryProject_.Net.AuthFilter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ using System.Web.Http.Cors;
 namespace FoodDeliveryProject_.Net.Controllers
 {
     [EnableCors("*", "*", "*")]
+    //[Logged]
     public class ItemController : ApiController
     {
         [HttpPost]

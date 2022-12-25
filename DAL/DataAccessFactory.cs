@@ -56,5 +56,14 @@ namespace DAL
         {
             return new TokenRepo();
         }
+        public static ICustomerOrder CustomerOrderAccess()
+        {
+            return new OrderRepo();
+        }
+
+        public static IDeleteCart OrderCartAccess()
+        {
+            return new CartRepo();
+        }
     }
 }

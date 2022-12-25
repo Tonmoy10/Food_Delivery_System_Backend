@@ -60,5 +60,18 @@ namespace BLL.Services
             }
             return false;
         }
+
+        public static int userInfo(string token)
+        {
+            var tokens = DataAccessFactory.TokenDataAccess().GetAll();
+            var customers = DataAccessFactory.CustomerDataAccess().GetAll();
+            var data = tokens.FirstOrDefault(u => u.token_key.Equals(token));
+            var record = customers.FirstOrDefault(u => u.user_id.Equals(data.user_id));
+            if(data != null && data.expired == null)
+            {
+                return record.customer_id;
+            }
+            return 0;
+        }
     }
 }

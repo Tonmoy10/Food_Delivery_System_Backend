@@ -41,5 +41,17 @@ namespace FoodDeliveryProject_.Net.Controllers
             return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Unsuccessful logout");
 
         }
+
+        [HttpGet]
+        [Route("api/getUser")]
+        public HttpResponseMessage getUserId()
+        {
+            int id = AuthService.userInfo(Request.Headers.Authorization.ToString());
+            if(id > 0)
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, id);
+            }
+            return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Unsuccessful");
+        }
     }
 }

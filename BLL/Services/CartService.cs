@@ -52,5 +52,10 @@ namespace BLL.Services
             var value = mapper.Map<Cart>(data);
             return DataAccessFactory.CartDataAccess().Update(value);
         }
+
+        public static bool OrderCartUpdate()
+        {
+            return DataAccessFactory.OrderCartAccess().Confirm();
+        }
     }
 }

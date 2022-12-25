@@ -84,5 +84,20 @@ namespace FoodDeliveryProject_.Net.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+
+        [HttpGet]
+        [Route("api/new/order")]
+        public HttpResponseMessage NewOrder()
+        {
+            try
+            {
+                var data = CartService.OrderCartUpdate();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
     }
 }

@@ -52,5 +52,15 @@ namespace BLL.Services
             var value = mapper.Map<Order>(data);
             return DataAccessFactory.OrderDataAccess().Update(value);
         }
+        public static List<OrderDTO> CustomerOrder(int id)
+        {
+            var data = DataAccessFactory.CustomerOrderAccess().CustomerOrder(id);
+            var config = new MapperConfiguration(c => {
+                c.CreateMap<Order, OrderDTO>();
+            });
+            var mapper = new Mapper(config);
+            return mapper.Map<List<OrderDTO>>(data);
+        }
+
     }
 }

@@ -11,15 +11,15 @@ using System.Web.Http.Cors;
 namespace FoodDeliveryProject_.Net.Controllers
 {
     [EnableCors("*", "*", "*")]
-    public class OrderController : ApiController
+    public class UserController : ApiController
     {
         [HttpPost]
-        [Route("api/Add/Order")]
-        public HttpResponseMessage AddOrder(OrderDTO data)
+        [Route("api/Add/User")]
+        public HttpResponseMessage AddUser(UserDTO data)
         {
             try
             {
-                var user = OrderService.AddOrder(data);
+                var user = UserService.AddUser(data);
                 return Request.CreateResponse(HttpStatusCode.OK, user);
             }
             catch (Exception ex)
@@ -28,12 +28,12 @@ namespace FoodDeliveryProject_.Net.Controllers
             }
         }
         [HttpGet]
-        [Route("api/Order/Delete/{id}")]
-        public HttpResponseMessage DeleteOrder(int id)
+        [Route("api/User/Delete/{id}")]
+        public HttpResponseMessage DeleteUser(int id)
         {
             try
             {
-                var data = OrderService.DeleteOrder(id);
+                var data = UserService.DeleteUser(id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -43,12 +43,12 @@ namespace FoodDeliveryProject_.Net.Controllers
 
         }
         [HttpPost]
-        [Route("api/Order/Update")]
-        public HttpResponseMessage UpdateOrder(OrderDTO data)
+        [Route("api/User/Update")]
+        public HttpResponseMessage UpdateUser(UserDTO data)
         {
             try
             {
-                var user = OrderService.OrderUpdate(data);
+                var user = UserService.UserUpdate(data);
                 return Request.CreateResponse(HttpStatusCode.OK, user);
             }
             catch (Exception ex)
@@ -57,12 +57,12 @@ namespace FoodDeliveryProject_.Net.Controllers
             }
         }
         [HttpGet]
-        [Route("api/View/Orders")]
-        public HttpResponseMessage GetOrders()
+        [Route("api/View/Users")]
+        public HttpResponseMessage GetUsers()
         {
             try
             {
-                var data = OrderService.GetOrders();
+                var data = UserService.GetUsers();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -71,26 +71,12 @@ namespace FoodDeliveryProject_.Net.Controllers
             }
         }
         [HttpGet]
-        [Route("api/View/Order/{id}")]
-        public HttpResponseMessage GetOrder(int id)
+        [Route("api/View/User/{id}")]
+        public HttpResponseMessage GetUser(int id)
         {
             try
             {
-                var data = OrderService.GetOrder(id);
-                return Request.CreateResponse(HttpStatusCode.OK, data);
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
-            }
-        }
-        [HttpGet]
-        [Route("api/Customer/Orders/{id}")]
-        public HttpResponseMessage CustomerOrder(int id)
-        {
-            try
-            {
-                var data = OrderService.CustomerOrder(id);
+                var data = UserService.GetUser(id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)

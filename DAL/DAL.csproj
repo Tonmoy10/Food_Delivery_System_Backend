@@ -65,6 +65,8 @@
     <Compile Include="EF\Models\User.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\ICrud.cs" />
+    <Compile Include="Interfaces\ICustomerOrder.cs" />
+    <Compile Include="Interfaces\IDeleteCart.cs" />
     <Compile Include="Interfaces\IEmployee.cs" />
     <Compile Include="Migrations\202212070701146_AddAllTablesAndSeeding.cs" />
     <Compile Include="Migrations\202212070701146_AddAllTablesAndSeeding.designer.cs">
