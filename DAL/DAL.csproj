@@ -64,6 +64,7 @@
     <Compile Include="EF\Models\Token.cs" />
     <Compile Include="EF\Models\User.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
+    <Compile Include="Interfaces\ICount.cs" />
     <Compile Include="Interfaces\ICrud.cs" />
     <Compile Include="Interfaces\ICustomerOrder.cs" />
     <Compile Include="Interfaces\IDeleteCart.cs" />

@@ -84,5 +84,21 @@ namespace FoodDeliveryProject_.Net.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+
+        [HttpGet]
+        [Route("api/user/count")]
+        public HttpResponseMessage revenue()
+        {
+            try
+            {
+                int data = UserService.UserCount();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+
+        }
     }
 }

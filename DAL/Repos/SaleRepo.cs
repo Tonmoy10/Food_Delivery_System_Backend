@@ -8,8 +8,23 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class SaleRepo : DatabaseRepo, ICrud<Sale, int, bool>
+    internal class SaleRepo : DatabaseRepo, ICrud<Sale, int, bool>, ICount
     {
+        public int Count() 
+        {
+            int total = 0;
+            var data = GetAll();
+            foreach (var item in data)
+            {
+                total += item.revenue;
+            }
+            return total;
+        }
+
+        
+            
+        
+
         public bool Add(Sale data)
         {
             database.Sales.Add(data);

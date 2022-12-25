@@ -65,5 +65,15 @@ namespace DAL
         {
             return new CartRepo();
         }
+
+        public static ICount UserCountAccess()
+        {
+            return new UserRepo();
+        }
+
+        public static ICount SaleCountAccess()
+        {
+            return new SaleRepo();
+        }
     }
 }

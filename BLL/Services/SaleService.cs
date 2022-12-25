@@ -52,5 +52,10 @@ namespace BLL.Services
             var value = mapper.Map<Sale>(data);
             return DataAccessFactory.SaleDataAccess().Update(value);
         }
+
+        public static int SaleCount()
+        {
+            return DataAccessFactory.SaleCountAccess().Count();
+        }
     }
 }

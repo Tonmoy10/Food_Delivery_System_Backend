@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class UserRepo : DatabaseRepo, ICrud<User, int, bool>, IAuth
+    internal class UserRepo : DatabaseRepo, ICrud<User, int, bool>, IAuth, ICount
     {
+
         public bool Add(User data)
         {
             database.Users.Add(data);
@@ -25,6 +26,11 @@ namespace DAL.Repos
                 return data;
             }
             return null;
+        }
+
+        public int Count()
+        {
+            return GetAll().Count;
         }
 
         public bool Delete(int id)
