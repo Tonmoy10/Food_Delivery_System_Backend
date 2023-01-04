@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace FoodDeliveryProject.Controllers
 {
     [EnableCors("*","*","*")]
-    //[Logged]
+    [Logged]
     public class AdminController : ApiController
     {
         [HttpPost]
